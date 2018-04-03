@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50638
 File Encoding         : 65001
 
-Date: 2018-04-02 19:47:53
+Date: 2018-04-03 12:05:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,7 +54,7 @@ CREATE TABLE `room_status` (
   CONSTRAINT `room_status_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`),
   CONSTRAINT `room_status_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `room_status_ibfk_3` FOREIGN KEY (`choice_time`) REFERENCES `times` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of room_status
@@ -89,6 +89,20 @@ INSERT INTO `room_status` VALUES ('66', '2018-04-02', '5', '17', '4');
 INSERT INTO `room_status` VALUES ('67', '2018-04-02', '6', '17', '4');
 INSERT INTO `room_status` VALUES ('68', '2018-04-02', '2', '17', '4');
 INSERT INTO `room_status` VALUES ('69', '2018-04-02', '3', '17', '4');
+INSERT INTO `room_status` VALUES ('70', '2018-04-03', '1', '11', '1');
+INSERT INTO `room_status` VALUES ('71', '2018-04-03', '1', '12', '1');
+INSERT INTO `room_status` VALUES ('72', '2018-04-03', '1', '13', '1');
+INSERT INTO `room_status` VALUES ('73', '2018-04-03', '3', '10', '1');
+INSERT INTO `room_status` VALUES ('74', '2018-04-03', '3', '11', '1');
+INSERT INTO `room_status` VALUES ('75', '2018-04-03', '3', '12', '1');
+INSERT INTO `room_status` VALUES ('76', '2018-04-03', '3', '13', '1');
+INSERT INTO `room_status` VALUES ('77', '2018-04-03', '3', '14', '1');
+INSERT INTO `room_status` VALUES ('78', '2018-04-03', '2', '12', '1');
+INSERT INTO `room_status` VALUES ('79', '2018-04-03', '4', '12', '1');
+INSERT INTO `room_status` VALUES ('80', '2018-04-03', '5', '12', '1');
+INSERT INTO `room_status` VALUES ('81', '2018-04-03', '6', '12', '1');
+INSERT INTO `room_status` VALUES ('82', '2018-04-03', '7', '12', '1');
+INSERT INTO `room_status` VALUES ('83', '2018-04-03', '8', '12', '1');
 
 -- ----------------------------
 -- Table structure for `times`

@@ -131,7 +131,8 @@
         autoclose: 1//选择后自动关闭
     });
     $('.select').on('click',function () {
-       var date = $('#date1').val();
+        alert='666';
+        var date = $('#date1').val();
         if (date){
             $('#dt').val(date)
         }
@@ -144,7 +145,7 @@
 //　 $('#dt').val(new Date().toLocaleDateString())
 //　　
 //}
-    $('.ding').on('click',function () {
+    $(document.body).on('click','.ding',function () {
         alert($('#dt').val());
         var that=this;
         $.ajax({
@@ -157,21 +158,21 @@
             },
             success:function (data) {
                 var data=JSON.parse(data);
-                console.log(data);
                 if (data.stude==1){
                     alert('预定成功');
 
-                    $(that).parent().html('<button class="del_rm" xrid='+data.rid+ 'xtid='+data.tid+'>'+data.user+'订</button>')
+                    $(that).parent().html('<button class="del_rm" xrid='+data.rid+ ' xtid='+data.tid+'>'+data.user+'订</button>')
                 }
                 else {
                     alert('预定失败')
                 }
             }
-        })
+        });
+        return false;
     });
 
     //取消订阅
-        $('.del_rm').on('click',function () {
+        $(document.body).on('click','.del_rm',function () {
         alert('确定要取消吗？');
         var that=this;
         $.ajax({
@@ -184,7 +185,6 @@
             },
             success:function (data) {
                 var data=JSON.parse(data);
-                console.log(data);
                 if (data.stude==1){
                     alert('取消成功');
                     $(that).parent().html('<button class="ding" rid='+data.xrid+' tid='+data.xtid+'>可预订</button>')
@@ -196,7 +196,8 @@
                     alert('抱歉，您不能修改他人的房间预定')
                 }
             }
-        })
+        });
+            return false;
     });
 </script>
 </html>
