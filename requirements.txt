@@ -16,7 +16,7 @@ cycler==0.10.0
 DBUtils==1.2
 decorator==4.2.1
 Django==1.11.7
-djangorestframework==3.7.7
+djangorestframework==3.11.2
 docopt==0.6.2
 entrypoints==0.2.3
 Flask==0.12.2
